@@ -1,13 +1,12 @@
+import React from 'react';
+import WelcomeMessage from './components/WelcomeMessage';
 import UserProfile from './components/UserProfile';
 
 function App() {
   return (
     <div>
-      <UserProfile 
-        name="Alice" 
-        age="25" 
-        bio="Loves hiking and photography" 
-      />
+      <WelcomeMessage />
+      <UserProfile name="Alice" age="25" bio="Loves hiking and photography" />
     </div>
   );
 }
