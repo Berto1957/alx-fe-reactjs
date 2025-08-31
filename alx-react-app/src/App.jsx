@@ -8,9 +8,7 @@ function App() {
   return (
     <div>
       <Header />
-      <WelcomeMessage />
-      <UserProfile name="Alice" age="25" bio="Loves hiking and photography" />
-
+      <WelcomeMessage name="Momo" />
       <MainContent />
       <Footer />
     </div>
