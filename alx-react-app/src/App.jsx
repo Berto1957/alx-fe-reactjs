@@ -8,7 +8,7 @@ function App() {
   return (
     <div>
       <Header />
-      <WelcomeMessage name="Momo" />
+      <WelcomeMessage name="Alice" />
       <MainContent />
       <Footer />
     </div>
