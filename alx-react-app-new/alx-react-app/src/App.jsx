@@ -1,20 +1,18 @@
-cat > src/App.js << 'EOF'
+import React from 'react';
 import Header from './components/Header';
-import MainContent from './components/MainContent';
 import UserProfile from './components/UserProfile';
+import MainContent from './components/MainContent';
 import Footer from './components/Footer';
 
 function App() {
   return (
     <div>
       <Header />
+      <UserProfile name="John Doe" age={28} bio="A passionate traveler and software developer." />
       <MainContent />
-      <UserProfile name="Alice" age={25} bio="I love traveling and exploring new cultures." />
-      <UserProfile name="Bob" age={30} bio="Foodie and history enthusiast." />
       <Footer />
     </div>
   );
 }
 
 export default App;
-EOF
