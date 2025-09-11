@@ -1,11 +1,21 @@
 // src/App.jsx
-import Counter from "./components/Counter";
+import Header from "./Header";
+import MainContent from "./MainContent";
+import Footer from "./Footer";
+import UserContext from "./UserContext";
 
-export default function App() {
+function App() {
+  const userData = { name: "Jane Doe", email: "jane.doe@example.com" };
+
   return (
-    <div style={{ textAlign: "center", padding: "20px" }}>
-      <h1>Simple Counter App</h1>
-      <Counter />
-    </div>
+    <UserContext.Provider value={userData}>
+      <div style={{ textAlign: "center", padding: "20px" }}>
+        <Header />
+        <MainContent />
+        <Footer />
+      </div>
+    </UserContext.Provider>
   );
 }
+
+export default App;
