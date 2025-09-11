@@ -1,20 +1,19 @@
-// src/App.jsx
-import Header from "./Header";
-import MainContent from "./MainContent";
-import Footer from "./Footer";
-import UserContext from "./UserContext";
+import React from 'react';
+import Header from './components/Header';
+import MainContent from './components/MainContent';
+import Footer from './components/Footer';
+import WelcomeMessage from './components/WelcomeMessage';
+import UserProfile from './components/UserProfile';
 
 function App() {
-  const userData = { name: "Jane Doe", email: "jane.doe@example.com" };
-
   return (
-    <UserContext.Provider value={userData}>
-      <div style={{ textAlign: "center", padding: "20px" }}>
-        <Header />
-        <MainContent />
-        <Footer />
-      </div>
-    </UserContext.Provider>
+    <div>
+      <Header />
+      <MainContent />
+      <Footer />
+      <WelcomeMessage name="Momo" />
+      <UserProfile name="Alice" age="25" bio="Loves hiking and photography" />
+    </div>
   );
 }
 
