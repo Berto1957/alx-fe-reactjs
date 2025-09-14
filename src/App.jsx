@@ -1,11 +1,11 @@
 import React from "react";
-import Counter from "./Counter";   // 👈 This is what the checker is looking for
+import Counter from "./components/Counter";
 
 function App() {
   return (
     <div>
       <h1>My Counter App</h1>
-      <Counter />   {/* 👈 Using Counter so it's detected */}
+      <Counter />
     </div>
   );
 }
