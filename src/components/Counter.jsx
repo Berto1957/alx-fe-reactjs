@@ -1,5 +1,5 @@
 // src/components/Counter.jsx
-import { useState } from 'react';
+import { useState } from "react";
 
 function Counter() {
   const [count, setCount] = useState(0);

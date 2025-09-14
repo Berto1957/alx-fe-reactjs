@@ -1,10 +1,10 @@
 // src/App.jsx
-import Counter from './components/Counter';
+import Counter from "./components/Counter";
 
 function App() {
   return (
     <div>
-      <h1>Simple Counter App</h1>
+      <h1>My Counter App</h1>
       <Counter />
     </div>
   );
