@@ -1,26 +1,19 @@
-// src/TimeFilter.jsx
-import React from "react";
-import { useRecipeStore } from "./recipeStore";
+import React from 'react';
+import { useRecipeStore } from './recipeStore';
 
 const TimeFilter = () => {
-  const setMaxTime = useRecipeStore((state) => state.setMaxTime);
+  const recipes = useRecipeStore((state) => state.recipes);
+  const setSearchTerm = useRecipeStore((state) => state.setSearchTerm);
+
+  const handleFilter = (time) => {
+    setSearchTerm(time.toString());
+  };
 
   return (
-    <select
-      onChange={(e) => setMaxTime(Number(e.target.value) || null)}
-      style={{
-        margin: "10px 0",
-        padding: "8px",
-        borderRadius: "6px",
-        fontSize: "14px",
-      }}
-    >
-      <option value="">⏱ Filter by cooking time</option>
-      <option value="15">≤ 15 mins</option>
-      <option value="30">≤ 30 mins</option>
-      <option value="45">≤ 45 mins</option>
-      <option value="60">≤ 1 hour</option>
-    </select>
+    <div style={{ marginTop: '10px' }}>
+      <button onClick={() => handleFilter('30')}>Under 30 min</button>
+      <button onClick={() => handleFilter('60')}>Under 1 hour</button>
+    </div>
   );
 };
 
