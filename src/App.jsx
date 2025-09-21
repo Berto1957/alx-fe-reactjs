@@ -1,10 +1,10 @@
-import AddRecipeForm from './components/AddRecipeForm';
-import RecipeList from './components/RecipeList';
+import RecipeList from "./components/RecipeList";
+import AddRecipeForm from "./components/AddRecipeForm";
 
 function App() {
   return (
-    <div className="App">
-      <h1>🍲 Recipe Sharing App</h1>
+    <div>
+      <h1>My Recipes</h1>
       <AddRecipeForm />
       <RecipeList />
     </div>
@@ -12,3 +12,4 @@ function App() {
 }
 
 export default App;
+
