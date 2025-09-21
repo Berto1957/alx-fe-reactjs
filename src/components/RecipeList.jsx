@@ -11,10 +11,10 @@ const RecipeList = () => {
         <p>No recipes found</p>
       ) : (
         <ul>
-          {recipes.map((recipe, index) => (
-            <li key={index}>
+          {recipes.map((recipe) => (
+            <li key={recipe.id}>
               <h3>{recipe.title}</h3>
-              <p>{recipe.instructions}</p>
+              <p>{recipe.description}</p>
             </li>
           ))}
         </ul>
